@@ -1,7 +1,14 @@
-import {saludar} from './js/componentes';
 import './styles.css';
-// import img from './assets/webpack.png'
 
-const nombre = 'Orlando';
+import {Todo, TodoList} from './classes'
+import { crearTodoHtml } from './js/componentes';
 
-saludar(nombre);
+
+export const todoList = new TodoList();
+// todoList.todos.forEach( todo => crearTodoHtml( todo ));
+todoList.todos.forEach(crearTodoHtml);
+
+// const newTodo = new Todo('Aprender ingles!!');
+// todoList.nuevoTodo(newTodo);
+// todoList.todos[0].imprimirClase();
+// console.log('tareas', todoList.todos);
